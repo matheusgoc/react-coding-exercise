@@ -1,0 +1,120 @@
+/* List */
+#launch-list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#launch-list > .side {
+  background-image: url("../../images/bg-launches.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 30%;
+}
+
+#launch-list > .list {
+  padding-top: 4em;
+  width: 100%;
+  margin: 0 10px 30px 10px;
+}
+
+/* List Header */
+#launch-list > .list > header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  padding-right: 40px;
+}
+
+#launch-list > .list > header .search-bar {
+  background-image: url("../../images/icon-rocket.svg");
+  background-color: #193247;
+  background-position: 5px;
+  background-repeat: no-repeat;
+  border-radius: 44px;
+  margin: 0 5px 0 10px;
+  padding: 0 5px 0 30px;
+  height: 33px;
+  vertical-align: center;
+  width: 100%;
+}
+
+#launch-list > .list > header .search-bar input {
+  background-color: transparent;
+  color: #f4ddb6;
+  border: none;
+  height: 100%;
+}
+
+#launch-list > .list > header .search-bar input::placeholder {
+  color: #f4ddb6;
+  opacity: 1;
+}
+
+/* List Grid */
+#launch-list > .list > .grid {
+  margin-top: 20px;
+  min-height: 400px;
+}
+
+#launch-list > .list > .grid header {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #193247;
+  border-bottom: 1px solid #193247;
+  display: flex;
+  flex-flow: row nowrap;
+  padding-bottom: 5px;
+  margin-right: 40px;
+}
+
+#launch-list > .list > .grid header label {
+  padding: 0 20px;
+}
+
+#launch-list > .list > .grid ul {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  margin: 10px 0;
+}
+
+#launch-list > .list > .grid ul li {
+  background-color: #fdf2dd;
+  color: #606060;
+  height: 70px;
+  border-radius: 14px;
+  margin: 0 3px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  font-size: .9em;
+  transition: background-color ease .5s;
+}
+
+#launch-list > .list > .grid ul:hover li {
+  background-color: #d14b39;
+  color: #fff;
+  font-weight: bold;
+}
+
+#launch-list > .list > .grid ul .btn-details {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent !important;
+  border-radius: 0;
+  padding: 0;
+}
+
+#launch-list > .list > .grid ul .btn-details img {
+  position: absolute;
+  left: -100px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+#launch-list > .list > .grid ul:hover .btn-details img {
+  transition: .5s;
+  left: 0;
+}

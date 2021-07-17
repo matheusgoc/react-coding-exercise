@@ -1,0 +1,88 @@
+/* Launch Details */
+#launch-details {
+  background-image: url("../../images/bg-details.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  color: #f4ddb6;
+}
+
+#launch-details > .btn-back {
+  width: 112px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#launch-details > .btn-back > img {
+  cursor: pointer;
+  width: 49px;
+}
+
+#launch-details > .card-wrapper {
+  width: 1152px;
+}
+
+#launch-details > .card-wrapper > .card {
+  position: relative;
+  background-image: url("../../images/details-card.svg");
+  background-size: cover;
+  height: 490px;
+  width: 100%;
+}
+
+#launch-details label {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+#launch-details div {
+  font-size: 20px;
+}
+
+#launch-details > .card-wrapper > .card > .card-content {
+  padding-top: 140px;
+  padding-left: 160px;
+}
+
+#launch-details .details-mission label {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+#launch-details .details-mission div {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+#launch-details .details-rocket {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  max-width: 320px;
+  padding-top: 20px;
+}
+
+#launch-details .details-year {
+  position: absolute;
+  top: 90px;
+  right: 160px;
+  color: #193247;
+}
+
+#launch-details .details-year label {
+  font-size: 13px;
+}
+
+#launch-details .details-year div {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+#launch-details .btn-print {
+  float: right;
+  margin-right: 60px;
+  margin-top: -20px;
+}

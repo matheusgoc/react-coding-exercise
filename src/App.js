@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import LaunchList from "./features/launch-list/LaunchList";
+import LaunchDetails from "./features/launch-details/LaunchDetails";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+} from "@apollo/client"
 
-function App() {
+const client = new ApolloClient({
+  uri: 'https://api.spacex.land/graphql',
+  cache: new InMemoryCache()
+})
+
+const App = () => {
+
+  const [launch, setLaunch] = useState(null)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ApolloProvider client={client}>
+      {(launch)?
+        <LaunchDetails launch={launch} onBack={() => setLaunch(null)} /> :
+        <LaunchList onSelect={(launch) => setLaunch(launch)} />
+      }
+    </ApolloProvider>
+  )
 }
 
-export default App;
+export default App
